@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en" >
+  
+  <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	
+	<meta name="description" content="Matrik">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+	
+	
+	<meta name="author" content="Battinoju Sai Kumar">
+
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+	
+	<title>Matrik - The Matrix Trick</title>
+
+	
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	
+	
+	<style>
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	h2
+	  {
+	    font-size: 3em;
+		text-align:center;
+	  }
+	h1.sec{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		padding:0;
+	}
+
+	.intro p{
+		color: #fff;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+
+
+	/* Defining each sectino background and styles
+	* --------------------------------------- */
+	#section0{
+		background: -webkit-gradient(linear, top left, bottom left, from(#4bbfc3), to(#7baabe));
+		background: -webkit-linear-gradient(#4BBFC3, #7BAABE);
+		background: linear-gradient(#4BBFC3,#7BAABE);
+	}
+
+	#section2{
+		background: -webkit-gradient(linear, top left, bottom left, from(#969ac6), to(#636F8F));
+		background: -webkit-linear-gradient(#969AC6, #636F8F);
+		background: linear-gradient(#969AC6,#636F8F);
+	}
+
+
+
+ 	/*Adding background for the slides
+	* --------------------------------------- */
+	#slide1{
+		background: -webkit-gradient(linear, top left, bottom left, from(#7baabe), to(#969ac6));
+		background: -webkit-linear-gradient(#7BAABE, #969AC6);
+		background: linear-gradient(#7BAABE,#969AC6);
+	}
+	#slide2{
+		background: -webkit-gradient(linear, top left, bottom left, from(#92a1ca), to(#76c2bd));
+		background: -webkit-linear-gradient(#92a1ca, #76c2bd);
+		background: linear-gradient(#92a1ca,#76c2bd);
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+	
+	.box
+	  {
+	    width: 541px;
+		*border: 1px solid black;
+		margin: 0 auto;
+		background-color: white;
+	  }
+	.block
+	  {
+	    width: 175px;
+		height: 175px;
+		border: 1px solid #171717;
+		float: left;
+		margin: 1px;
+		opacity: 0.8;
+		cursor: move;
+		
+		animation-duration: 5s;
+		-moz-animation-duration: 0.5s; /* Firefox */
+        -webkit-animation-duration: 0.5s; /* Safari and Chrome */
+        -o-animation-duration: 0.5s; /* Opera */
+		
+		background-image: url('img/img.png');
+
+	  }
+	.block:hover
+	  {
+	    border: 1px solid white;
+		box-shadow: 0px 0px 10px 3px white;
+		opacity:1;
+		background-color: white;
+	  }
+
+	/*
+
+	#a
+	  {
+	    background-image: url('img/img.png');
+		background-position: 0px 0px;
+	  }
+	  
+	#b
+	  {
+	    background-image: url('img/img.png');
+		background-position: -175px 0px;
+	  }
+	#c
+	  {
+	    background-image: url('img/img.png');
+		*background-position: -350px 0px;
+	  }
+	  
+	#d
+	  {
+	    background-image: url('img/img.png');
+		background-position: 0px -175px;
+	  }
+	#e
+	  {
+	    background-image: url('img/img.png');
+		*background-position: -175px -175px;
+	  }
+	  
+    #f
+	  {
+	    background-image: url('img/img.png');
+		background-position: -350px -175px;
+	  }
+	  
+	  
+	#g
+	  {
+	    background-image: url('img/img.png');
+		background-position: 0px -350px;
+	  }
+	  
+	#h
+	  {
+	    background-image: url('img/img.png');
+		background-position: -175px -350px;
+	  }
+	  
+	#i
+	  {
+	    background-image: url('img/img.png');
+		background-position: -350px -350px;
+	  }*/
+	  
+	@keyframes shake { 0% { transform: translate(2px, 1px) rotate(0deg) ; box-shadow: 0px 0px 10px 3px red;} 10% { transform: translate(-1px, -2px) rotate(-1deg);  box-shadow: 0px 0px 10px 3px white;} 20% { transform: translate(-3px, 0px) rotate(1deg);  box-shadow: 0px 0px 10px 3px red;} 30% { transform: translate(0px, 2px) rotate(0deg);  box-shadow: 0px 0px 10px 3px white;} 40% { transform: translate(1px, -1px) rotate(1deg);  box-shadow: 0px 0px 10px 3px red;} 50% { transform: translate(-1px, 2px) rotate(-1deg);  box-shadow: 0px 0px 10px 3px white;} 60% { transform: translate(-3px, 1px) rotate(0deg);  box-shadow: 0px 0px 10px 3px red;} 70% { transform: translate(2px, 1px) rotate(-1deg);  box-shadow: 0px 0px 10px 3px white;} 80% { transform: translate(-1px, -1px) rotate(1deg);  box-shadow: 0px 0px 10px 3px red;} 90% { transform: translate(2px, 2px) rotate(0deg);  box-shadow: 0px 0px 10px 3px white;} 100% { transform: translate(1px, -2px) rotate(-1deg);  box-shadow: 0px 0px 10px 3px red;} }
+
+	
+	
+	@-moz-keyframes shake 
+	{ 0% { transform: translate(2px, 1px) rotate(0deg) ; box-shadow: 0px 0px 10px 3px red;} 10% { transform: translate(-1px, -2px) rotate(-1deg);  box-shadow: 0px 0px 10px 3px white;} 20% { transform: translate(-3px, 0px) rotate(1deg);  box-shadow: 0px 0px 10px 3px red;} 30% { transform: translate(0px, 2px) rotate(0deg);  box-shadow: 0px 0px 10px 3px white;} 40% { transform: translate(1px, -1px) rotate(1deg);  box-shadow: 0px 0px 10px 3px red;} 50% { transform: translate(-1px, 2px) rotate(-1deg);  box-shadow: 0px 0px 10px 3px white;} 60% { transform: translate(-3px, 1px) rotate(0deg);  box-shadow: 0px 0px 10px 3px red;} 70% { transform: translate(2px, 1px) rotate(-1deg);  box-shadow: 0px 0px 10px 3px white;} 80% { transform: translate(-1px, -1px) rotate(1deg);  box-shadow: 0px 0px 10px 3px red;} 90% { transform: translate(2px, 2px) rotate(0deg);  box-shadow: 0px 0px 10px 3px white;} 100% { transform: translate(1px, -2px) rotate(-1deg);  box-shadow: 0px 0px 10px 3px red;} }
+	
+	
+	
+	@-webkit-keyframes shake 
+	{ 0% { transform: translate(2px, 1px) rotate(0deg) ; box-shadow: 0px 0px 10px 3px red;} 10% { transform: translate(-1px, -2px) rotate(-1deg);  box-shadow: 0px 0px 10px 3px white;} 20% { transform: translate(-3px, 0px) rotate(1deg);  box-shadow: 0px 0px 10px 3px red;} 30% { transform: translate(0px, 2px) rotate(0deg);  box-shadow: 0px 0px 10px 3px white;} 40% { transform: translate(1px, -1px) rotate(1deg);  box-shadow: 0px 0px 10px 3px red;} 50% { transform: translate(-1px, 2px) rotate(-1deg);  box-shadow: 0px 0px 10px 3px white;} 60% { transform: translate(-3px, 1px) rotate(0deg);  box-shadow: 0px 0px 10px 3px red;} 70% { transform: translate(2px, 1px) rotate(-1deg);  box-shadow: 0px 0px 10px 3px white;} 80% { transform: translate(-1px, -1px) rotate(1deg);  box-shadow: 0px 0px 10px 3px red;} 90% { transform: translate(2px, 2px) rotate(0deg);  box-shadow: 0px 0px 10px 3px white;} 100% { transform: translate(1px, -2px) rotate(-1deg);  box-shadow: 0px 0px 10px 3px red;} }
+	
+	
+	
+	@-o-keyframes shake 
+	{ 0% { transform: translate(2px, 1px) rotate(0deg) ; box-shadow: 0px 0px 10px 3px red;} 10% { transform: translate(-1px, -2px) rotate(-1deg);  box-shadow: 0px 0px 10px 3px white;} 20% { transform: translate(-3px, 0px) rotate(1deg);  box-shadow: 0px 0px 10px 3px red;} 30% { transform: translate(0px, 2px) rotate(0deg);  box-shadow: 0px 0px 10px 3px white;} 40% { transform: translate(1px, -1px) rotate(1deg);  box-shadow: 0px 0px 10px 3px red;} 50% { transform: translate(-1px, 2px) rotate(-1deg);  box-shadow: 0px 0px 10px 3px white;} 60% { transform: translate(-3px, 1px) rotate(0deg);  box-shadow: 0px 0px 10px 3px red;} 70% { transform: translate(2px, 1px) rotate(-1deg);  box-shadow: 0px 0px 10px 3px white;} 80% { transform: translate(-1px, -1px) rotate(1deg);  box-shadow: 0px 0px 10px 3px red;} 90% { transform: translate(2px, 2px) rotate(0deg);  box-shadow: 0px 0px 10px 3px white;} 100% { transform: translate(1px, -2px) rotate(-1deg);  box-shadow: 0px 0px 10px 3px red;} 
+	}
+	
+	</style>
+	
+	
+
+
+	
+  </head>
+  
+  <body>
+    <div id="fullpage">
+	<div class="section " id="section0">
+	  <h2>Matrick</h2>
+	  <div ><b>Moves: </b></b><span id="steps" >0</span>&nbsp;&nbsp;&nbsp;<span id="alert"  style="color:green;" ><button onclick="restart();" >Refresh</button><button onclick="change_image();" >Change Image</button>&nbsp;&nbsp;</span><span style="color:white;" >Steps required(min): <span id="stepsRequired"></span></span></div>
+	  <div class="box" >
+	  
+	  
+	    <div class="block" id="a"  ondrop="drop(event)" ondragenter="dragging(event)"  draggable="true" ondragstart="drag(event)"  ondragover="allowDrop(event)" ondragleave="nodragging(event)" >
+		</div>
+		<div class="block" id="b"   ondrop="drop(event)" ondragenter="dragging(event)"  draggable="true" ondragstart="drag(event)"  ondragover="allowDrop(event)" ondragleave="nodragging(event)" >
+		</div>
+		<div class="block" id="c"   ondrop="drop(event)" ondragenter="dragging(event)"  draggable="true" ondragstart="drag(event)"  ondragover="allowDrop(event)" ondragleave="nodragging(event)" >
+		</div>
+		
+		
+		<div class="block" id="d"   ondrop="drop(event)" ondragenter="dragging(event)"  draggable="true" ondragstart="drag(event)"  ondragover="allowDrop(event)" ondragleave="nodragging(event)" >
+		</div>
+		<div class="block" id="e"   ondrop="drop(event)" ondragenter="dragging(event)"  draggable="true" ondragstart="drag(event)"  ondragover="allowDrop(event)" ondragleave="nodragging(event)" >
+		</div>
+		<div class="block" id="f"   ondrop="drop(event)" ondragenter="dragging(event)"  draggable="true" ondragstart="drag(event)"  ondragover="allowDrop(event)" ondragleave="nodragging(event)" >
+		</div>
+		
+		
+		<div class="block" id="g"   ondrop="drop(event)" ondragenter="dragging(event)"  draggable="true" ondragstart="drag(event)"  ondragover="allowDrop(event)" ondragleave="nodragging(event)" >
+		</div>
+		<div class="block" id="h"   ondrop="drop(event)" ondragenter="dragging(event)"  draggable="true" ondragstart="drag(event)"  ondragover="allowDrop(event)" ondragleave="nodragging(event)"  >
+		</div>
+		<div class="block" id="i"   ondrop="drop(event)" ondragenter="dragging(event)"  draggable="true" ondragstart="drag(event)"  ondragover="allowDrop(event)" ondragleave="nodragging(event)" >
+		</div>
+		
+		
+	  </div>
+	  <!--<h1 class="sec" >Gradient backgrounds</h1>-->
+	  
+	</div>
+	<!--<div class="section" id="section1">
+	    <div class="slide" id="slide1"><h1>Soft graduated colors</h1></div>
+	    <div class="slide" id="slide2"><h1>Even for each slide if you want</h1></div>
+	</div>
+	<div class="section" id="section2">
+		<div class="intro">
+			<h1>Feel free!</h1>
+			<p>Using CSS3 gradients you can play as much as you want with graduated colors</p>
+		</div>
+	</div>-->
+    </div>
+
+
+
+
+	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>-->
+	
+    <script src="js/jquery.js"></script>
+
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<!--<script type="text/javascript" src="js/examples.js"></script>-->
+	
+	<script type="text/javascript">
+	
+	   
+	    var blocks = document.getElementsByClassName("block");
+		var positions  = new Array("0px 0px", "-175px 0px", "-350px 0px", "0px -175px", "-175px -175px", "-350px -175px", "0px -350px", "-175px -350px", "-350px -350px");
+	    var num = 1;
+		
+
+  
+
+
+  //////////////////////////initializing variables/////////////////////////////
+	{
+		var validPositions  = new Array("0px 0px", "-175px 0px", "-350px 0px", "0px -175px", "-175px -175px", "-350px -175px", "0px -350px", "-175px -350px", "-350px -350px");
+
+		var ycount;
+
+		var currentSteps = new Array(9);
+
+
+		var paths = new Array(9);
+		
+		var requireSteps;
+
+	}
+  //////////////////////////initializing variables/////////////////////////////
+
+function initializeVars()
+	{
+		ycount=0;
+
+		for(var k=0;k<9;k++)
+			{
+			    paths[k] = new Array(9);
+				for(var p = 0;p<9;p++)
+					{
+					    paths[k][p] = new Array(6);
+						for(var l=0;l<6;l++)
+							{
+							    paths[k][p][l] = new Array(6);
+								
+								paths[k][p][l][0] = 0;
+						 	}
+					
+					}
+			}
+	}
+
+
+
+
+
+
+
+
+   /*******SHUFFLE AN ARRAY*******************************/
+	function shuffle(srcArray) 
+		{
+	   		var array = new Array();
+	      	array = srcArray.slice(0);
+	      	var currentIndex = array.length, temporaryValue, randomIndex ;
+
+
+	       // While there remain elements to shuffle...
+			while (0 !== currentIndex) 
+			    {
+
+		           // Pick a remaining element...
+		           randomIndex = Math.floor(Math.random() * currentIndex);
+		           currentIndex -= 1;
+		       
+		           // And swap it with the current element.
+		           temporaryValue = array[currentIndex];
+		           array[currentIndex] = array[randomIndex];
+		           array[randomIndex] = temporaryValue;
+		        }
+
+	     	return array;
+   		}
+   /*******SHUFFLE AN ARRAY*******************************/
+
+
+
+
+
+
+
+
+
+
+
+   /*******GET THE TILE POSITION FROM IMAGE POSITIONS*******************************/
+	function getPosition(str)
+	  {
+	    for(var i=0;i<9;i++)
+		  {
+		    if(str == validPositions[i])
+			  {
+			    return i;
+			  }
+		  }
+	  }
+   /*******GET THE TILE POSITION FROM IMAGE POSITIONS*******************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	//to display all paths between a source and destination
+	function showPath(src, dest)
+	  {
+	    var dstInd, srcInd;
+	    for(var i=0;i<9;i++)
+		  {
+		    if(src==validPositions[i])
+			  srcInd = i;
+			if(dest ==validPositions[i])
+			  dstInd = i;
+		  }
+		
+		var spl1="", spl2="", first=0, str="";
+		
+		var path = [];
+		var xcount=0;ycount=0;
+		
+		for(var i=0;i<6;i++)
+		  {
+		    spl1 = "Steps: " + paths[srcInd][dstInd][i][0]+ "  _______";
+			first = 1;
+			spl2 = "";
+			
+			path[ycount]=[];
+			
+		    for(var j=1;j<=paths[srcInd][dstInd][i][0]+1;j++)
+			  {
+			        if(typeof(paths[srcInd][dstInd][i][j])!="undefined")
+			    	  {
+			    	    if(!first)
+			    		  spl2 = spl2 + " &#8594; ";
+			    		else
+			    		  first = 0;
+			            spl2 = spl2 + paths[srcInd][dstInd][i][j];
+						
+						path[ycount][xcount++] = paths[srcInd][dstInd][i][j];
+			    	  }
+			    
+			  }
+			if(first==1)
+			  break;
+			
+			ycount++;
+			
+			str = str + spl1 + spl2;
+			str = str + '<br >'; 
+		  }
+		
+		document.write("<br />Paths: <br >" + str+"<br /><br />");
+			  
+	    return path;
+	  }
+
+	  //document.write(showPath("0px 0px", "350px 350px"));
+
+
+
+
+
+
+
+
+	//function to find all paths between a source and destination
+	function findPath(xpos, ypos, destx, desty, xfact, yfact, elem, pos, xcount)
+	  {
+	    var xnext = 0, ynext = 0, duos = 0;
+		var str1 = "", str2 = "";
+
+	    if(xpos == destx && ypos == desty)
+		  {
+		    paths[elem][pos][ycount++][xcount++] = xpos.toString()+'px '+ypos.toString()+'px';
+			xcount = 0;
+		    return '<br >*** '+xpos.toString()+'px '+ypos.toString()+'px';
+		  }
+		else
+	      {
+		    if(xfact>0)
+			  {
+			    if(xpos+xfact<=destx)
+				  xnext = 1;
+			  }
+			else
+			  {
+			    if(xpos+xfact>=destx)
+				  xnext = 1;
+			  }
+			  
+			
+			if(yfact>0)
+			  {
+				
+				if(ypos+yfact<=desty)
+				  ynext = 1;
+			  }
+			else
+			  {
+				
+				if(ypos+yfact>=desty)
+				  ynext = 1;
+			  }
+		    //document.write('<br >' + xpos + ypos + destx + desty + fact);
+			
+		    if(Math.abs(xpos+xfact)>=0  && Math.abs(xpos+xfact)<=350 && xnext ==1 )
+			  {
+			    //alert(elem);
+			    paths[elem][pos][ycount][0]++;
+				//document.write("<br >"+elem + pos);
+			    paths[elem][pos][ycount][xcount] = xpos.toString()+'px '+ypos.toString()+'px';
+		        str1 = '<br >*** '+xpos.toString()+'px '+ypos.toString()+'px' + findPath(xpos+xfact, ypos, destx, desty, xfact, yfact, elem, pos, xcount+1);
+				
+				duos = 1;
+			  }
+
+			
+			if(Math.abs(ypos+yfact)>=0  && Math.abs(ypos+yfact)<=350 && ynext==1)
+			  {
+			    if(duos==1)
+				  {
+				    for(var i=1;i<=xcount;i++)
+					  {
+					    if(typeof(paths[elem][pos][ycount-1][i])!="undefined")
+						  {
+					        paths[elem][pos][ycount][i] = paths[elem][pos][ycount-1][i];
+							
+							paths[elem][pos][ycount][0]++;
+						  }
+					  }
+				    paths[elem][pos][ycount][0]--;
+				  }
+			    
+			    paths[elem][pos][ycount][xcount] = xpos.toString()+'px '+ypos.toString()+'px';
+				paths[elem][pos][ycount][0]++;
+				
+		        str2 = '<br >### '+xpos.toString()+'px '+ypos.toString()+'px' + findPath(xpos, ypos+yfact, destx, desty, xfact, yfact, elem, pos, xcount+1);
+				
+				
+			  }
+			  
+            return str1 + str2;
+		  }
+	  }
+
+
+
+
+
+
+	//function to find all possible paths
+	function findAllPaths()
+		{
+			var pos = "", posx = "", posy = "", xdiff, ydiff, npos, no_steps, x=0, y=0, xfact=0, yfact=0;
+	
+	
+			for(var i=0;i<9;i++)
+			  {
+			    pos = validPositions[i].split("px");
+				posx = pos[0];
+				posy = pos[1];
+				//document.write("<br><br>"+posx+' * '+posy);
+			    for(var j=0;j<9;j++)
+				  {
+				    npos = validPositions[j].split("px");
+					
+					xdiff = Math.abs(Math.abs(posx)-Math.abs(npos[0]));
+					ydiff = Math.abs(Math.abs(posy)-Math.abs(npos[1]));
+					
+					
+					no_steps = Math.abs(xdiff + ydiff)/175;
+					
+					//document.write("<br >Position: " + positions[j] + " ->Steps: " + no_steps);
+					
+					x = parseInt(posx);
+					y = parseInt(posy);
+					
+					destx = parseInt(npos[0]);
+					desty = parseInt(npos[1]);
+					
+					xfact = 175;
+					yfact = 175;
+					
+					if(x>=destx)
+					  xfact = -175;
+					if(y>=desty)
+					  yfact = -175;
+					
+					ycount = 0;
+					//document.write(step(x, y, destx, desty, fact, j, 1));
+					findPath(x, y, destx, desty, xfact, yfact, i, j, 1);
+					
+					
+				    //document.write('<br >  X diff: ' + xdiff.toString());
+					//document.write(' |  Y diff: ' + ydiff.toString());
+				  }
+			  }
+
+
+		}
+
+
+
+
+
+
+
+	//to display all the possible paths
+	function displayAllPaths()
+		{
+			for(var i=0;i<9;i++)
+				{
+					
+					for(var j=0;j<9;j++)
+						{
+							document.write("<br />Src: "+validPositions[i]);
+							document.write("<br />Dst: "+validPositions[j]);
+							showPath(validPositions[i], validPositions[j]);
+						}
+					document.write("<br />");
+					document.write("<br />");
+					document.write("<br />");
+				}
+		}
+
+
+
+
+
+
+	function solveArrangement(recvRandomizedPositions)
+		{
+			initializeVars();
+
+
+			findAllPaths();
+			//displayAllPaths();
+			randomizedPositions = recvRandomizedPositions.slice(0);
+			//var randomizedPositions = shuffle(validPositions);
+			//var randomizedPositions  = new Array("-350px -350px", "0px 0px", "-350px 0px", "-350px -175px", "0px -350px", "-175px 0px", "0px -175px", "-175px -175px", "-175px -350px");
+			//document.write(validPositions);
+			//document.write("<br />");
+			//document.write(randomizedPositions);
+
+			var totalDistance = 0;
+			var a, b;
+			for(var i=0;i<9;i++)
+				{
+					b = getPosition(randomizedPositions[i]);
+					currentSteps[b]=paths[i][b][0][0];
+					totalDistance +=currentSteps[b];
+				}
+
+			var steps = new Array(100);
+			for(var i=0;i<100;i++)
+				{
+					steps[i]=new Array(2);
+				}
+
+
+
+			/*for(var i=0;i<9;i++)
+				{
+					for(var j=0;j<9;j++)
+						{
+							if(getPosition(randomizedPositions[j])==i)
+								{
+									document.write("<br /><br />" + (j+1) + " &#8594; " + (i+1)+"<br />Distance: "+currentSteps[i]);
+									break;
+								}
+						}
+					
+					
+				}*/
+
+			requireSteps=0;
+				
+			var newIndex;
+			var specialFlag = 0;
+			var specialCount=0;
+			while(totalDistance!=0)
+				{
+					for(var val = 4;val>=1;val--)
+						{
+							flag=0;
+							for(var i=0;i<9;i++)
+								{
+									if(currentSteps[i]==val)
+										{
+											flag=0;
+											for(var p=0;p<9;p++)
+												{
+													if(getPosition(randomizedPositions[p])==i)
+														{
+															//document.write("<br /><br /><br />Max step value is: " + val + " and it is for position: "+(i+1));
+
+															
+
+															//document.write("<br />But he is at: " + (p+1));
+
+															totalPaths = paths[p][i].length;
+
+															//document.write("<br />"+paths[p][i]);
+															//totalDistance-=2;
+															flag=0;
+															for(var j=0;j<totalPaths;j++)
+																{
+																	tempA = getPosition(paths[p][i][j][2]);
+																	flag=0;
+																	if(typeof(tempA)!="undefined")
+																		{
+																	
+																			//document.write("<br />Position of possibility: "+(tempA+1));
+
+																			tempB = getPosition(randomizedPositions[tempA]);
+
+																			//document.write("<br />Element present over there is: "+(tempB+1));
+																			//document.write("<br />"+paths[tempA][tempB]);
+
+																			tempTotalPaths = paths[tempA][tempB].length;
+
+																			flag=0;
+
+																			for(var k=0;k<tempTotalPaths;k++)
+																				{
+																					if(getPosition(paths[tempA][tempB][k][2])==p)
+																						{
+																							temp = randomizedPositions[tempA];
+
+																							randomizedPositions[tempA] = randomizedPositions[p];
+
+																							randomizedPositions[p] = temp;
+
+
+																							flag=1;
+
+
+
+																							currentSteps[i]--;
+																							currentSteps[tempB]--;
+
+																							
+																							
+
+																							totalDistance-=2;
+																							
+																							steps[requireSteps][0]=tempA;
+																							steps[requireSteps++][1]=p;
+
+																							//document.write("<br /><br />*********** STEP: "+(tempA+1) + " to " + (p+1));
+
+																							break;
+																						}
+
+
+																					if(specialFlag==1 && tempA<p && Math.random()>=0.95)
+																						{
+																							specialFlag=0;
+
+																							temp = randomizedPositions[tempA];
+
+																							randomizedPositions[tempA] = randomizedPositions[p];
+
+																							randomizedPositions[p] = temp;
+
+
+																							flag=1;
+
+
+
+																							currentSteps[i]--;
+																							currentSteps[tempB]++;
+
+																							
+																							
+
+																							//totalDistance-=2;
+																							
+																							steps[requireSteps][0]=tempA;
+																							steps[requireSteps++][1]=p;
+
+																							//document.write("<br /><br />SP*********** STEP: "+(tempA+1) + " to " + (p+1));
+
+																							prevA=tempA;
+																							prevB=p;
+
+																							break;
+
+																						}
+																				}
+																			if(flag)
+																				break;
+
+																		}
+																	if(flag)
+																		break;
+																}
+
+															
+															//flag=1;
+															if(flag)
+																break;
+
+														}
+												}
+											if(flag)
+												break;	
+										}
+									
+								}
+
+							if(flag)
+								break;
+						}
+					if(flag==0)
+						{
+							specialFlag=1;
+							specialCount++;
+							if(specialCount>33)
+								{
+									//requireSteps=33;
+									break;
+								}
+						}
+					//totalDistance--;
+				}
+
+
+
+
+
+
+
+		//alert("hia");
+		document.getElementById("stepsRequired").innerHTML=requireSteps;
+		//alert("\nSteps: "+requireSteps);
+
+		//document.write("<br /><br /><br />Number of steps: "+requireSteps);
+		/*document.write("<br />Steps are: ");
+		for(var i=0;i<requireSteps;i++)
+			{
+				document.write("<br />"+(steps[i][0]+1)+" &#8594; "+(steps[i][1]+1));
+			}*/
+				
+
+		}
+
+
+
+	////////////////////execution
+
+
+
+	//solveArrangement();
+
+
+
+		   
+		$(document).ready(function() {
+		
+
+		   
+		  
+		  
+		
+		    
+			$('#fullpage').fullpage();
+			
+			//alert("hi");
+			
+			
+			
+			
+			
+			var new_positions = positions;
+			
+			new_positions=shuffle(new_positions);
+
+
+
+			solveArrangement(new_positions);
+
+
+			
+			var temp = Math.floor(Math.random()*6+1);
+			while(temp==num)
+			  {
+			    temp = Math.floor(Math.random()*6+1);
+			  }
+			num = temp;
+			
+			for(var i=0;i<9;i++)
+			  {
+			    
+			    blocks[i].style.backgroundImage = "url('img/img"+num+".png')";
+			    blocks[i].style.backgroundPosition = new_positions[i];
+			  }
+			
+			
+
+});
+
+
+
+var steps = 0;
+
+
+
+
+function change_image()
+  {
+    restart();
+	var temp = Math.floor(Math.random()*6+1);
+	while(temp==num)
+      {
+        temp = Math.floor(Math.random()*6+1);
+      }
+    num = temp;
+	
+	for(var i=0;i<9;i++)
+	  {
+		blocks[i].style.backgroundImage = "url('img/img"+num+".png')";
+	  }
+  }
+  
+  
+  
+  
+
+function restart()
+		    {
+			  var new_positions = positions;
+			  
+			  new_positions=shuffle(new_positions);
+
+			  solveArrangement(new_positions);
+			  
+			  for(var i=0;i<9;i++)
+			   {
+			     blocks[i].style.backgroundPosition = new_positions[i];
+			   }
+			  steps = 0;
+			  
+			  document.getElementById("alert").innerHTML = "<button onclick=\"restart();\" >Refresh</button><button onclick=\"change_image();\" >Change Image</button>";
+			  
+			  document.getElementById("steps").innerHTML = "0";
+			}
+			
+
+
+
+			
+function checkDone()
+  {
+   // alert("hi");
+   var per_positions  = new Array("0px 0px", "-175px 0px", "-350px 0px", "0px -175px", "-175px -175px", "-350px -175px", "0px -350px", "-175px -350px", "-350px -350px");
+    var flag = 1;
+	var str = "";
+    for(var i=0;i<9;i++)
+	  {
+	    //str =  str + blocks[i].style.backgroundPosition + '    -   ' + per_positions[i] + '\n';
+	    //alert(blocks[i].style.backgroundPosition + positions[i]);
+	    if(blocks[i].style.backgroundPosition != per_positions[i])
+		  {
+		    flag  = 0;
+			//alert(blocks[i].style.backgroundPosition + per_positions[i]);
+			break;
+		  }
+	  }
+	//alert(str);
+
+	if(flag)
+	  {
+	    
+		
+		for(i=0;i<9;i++)
+		  {
+		    var $element = $(blocks[i]).bind('animationend', function(){
+                 this.style.animationName = '';
+             });
+            
+	        $element.css('animationName', 'shake');
+			
+			$element.css('animationDuration', '9');
+		  }
+		if(steps<=requireSteps)
+			alert("Hurrah! You won the game in "+steps+" steps!!!");
+		else
+			alert("You have successfully completed the game in " + steps + " moves!!!");
+		
+		document.getElementById("alert").innerHTML = "Game complete!!! <button onclick=\"restart();\" >Restart</button>";
+		
+	  }
+  }
+  
+function allowDrop(ev) {
+    ev.preventDefault();
+	//ev.target.style.boxShadow = "0px 0px 10px 3px white";
+	
+	
+}
+
+
+
+function drag(ev) {
+    ev.dataTransfer.setData("Text", ev.target.id);
+	$(document).css('cursor','move');
+	//alert(ev.target.style.height);
+}
+
+
+function dragging(ev)
+  {
+    //ev.target.style.opacity = "1";
+    ev.target.style.boxShadow = "0px 0px 10px 3px orange";
+  }
+
+function nodragging(ev)
+  {
+    //ev.target.style.opacity = "0.8";
+    ev.target.style.boxShadow = "";
+  }
+
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+	
+	//var offset = $(document.getElementById(data)).offset();
+	
+    //var src_posx = document.getElementById(data).style.backgroundPositionX;
+    //var src_posy = document.getElementById(data).style.backgroundPositionY;
+		
+
+	
+	
+	//var tar_posx = ev.clientX;
+	//var tar_posy = ev.clientY;
+	var src = $(document.getElementById(data)).css('backgroundPosition');
+	
+	var src_new = $(document.getElementById(data)).css('backgroundPosition').split("px");
+	
+	var src_xpos = src_new[0] - 0;
+	var src_ypos = src_new[1] - 0;
+	
+	
+	
+	var tar = $(ev.target).css('backgroundPosition');
+	
+	var tar_new = $(ev.target).css('backgroundPosition').split("px");
+	
+	//alert(src_new[0] + ', ' + src_new[1] + '\n' + tar_new[0] + ', ' + tar_new[1]);
+	
+	var tar_xpos = tar_new[0] - 0;
+	var tar_ypos = tar_new[1] - 0;
+	
+	//if((Math.abs(Math.abs(tar_xpos) - Math.abs(src_xpos))==175 || Math.abs(Math.abs(tar_xpos) - Math.abs(src_xpos))==0) && (Math.abs(Math.abs(tar_ypos) - Math.abs(src_ypos))==175 || Math.abs(Math.abs(tar_ypos) - Math.abs(src_ypos))==0) )
+	var next = 0;
+	if(data =='a')
+	  {
+	    if(ev.target.id=='b' || ev.target.id=='d' || ev.target.id=='a')
+		  {
+		    next = 1;
+		  }
+	  }
+	else if(data =='b')
+	  {
+	    if(ev.target.id=='a' || ev.target.id=='c'  || ev.target.id=='e' || ev.target.id=='b' )
+		  {
+		    next = 1;
+		  }
+	  }
+	else if(data =='c')
+	  {
+	    if(ev.target.id=='b' || ev.target.id=='f' || ev.target.id=='c')
+		  {
+		    next = 1;
+		  }
+	  }
+	else if(data =='d')
+	  {
+	    if(ev.target.id=='a' || ev.target.id=='g' || ev.target.id=='e' || ev.target.id=='d' )
+		  {
+		    next = 1;
+		  }
+	  }
+	else if(data =='e')
+	  {
+	    if(ev.target.id=='b' || ev.target.id=='d' || ev.target.id=='f'  || ev.target.id=='h' || ev.target.id=='e' )
+		  {
+		    next = 1;
+		  }
+	  }
+	else if(data =='f')
+	  {
+	    if(ev.target.id=='c' || ev.target.id=='e' || ev.target.id=='i'  || ev.target.id=='f')
+		  {
+		    next = 1;
+		  }
+	  }
+	else if(data =='g')
+	  {
+	    if(ev.target.id=='d' || ev.target.id=='h' || ev.target.id=='g')
+		  {
+		    next = 1;
+		  }
+	  }
+	else if(data =='h')
+	  {
+	    if(ev.target.id=='g' || ev.target.id=='e' || ev.target.id=='i'  || ev.target.id=='h')
+		  {
+		    next = 1;
+		  }
+	  }
+	else if(data =='i')
+	  {
+	    if(ev.target.id=='h' || ev.target.id=='f' || ev.target.id=='i')
+		  {
+		    next = 1;
+		  }
+	  }
+	
+	if(next)
+	  {
+	    document.getElementById(data).style.backgroundPosition = tar;
+	
+
+	    ev.target.style.backgroundPosition = src;
+		
+		if(ev.target.id!=data)
+		  steps++;
+		document.getElementById("steps").innerHTML = steps;
+		//document.getElementById("alert").innerHTML = "";
+		
+		//ev.target.style.opacity = "0.8";
+        //ev.target.style.boxShadow = "";
+	
+	
+		checkDone();
+		//alert(steps);
+	  }
+	else
+	  {
+		var $element = $(ev.target).bind('animationend', function(){
+             this.style.animationName = '';
+         });
+
+	    $element.css('animationName', 'shake');
+		
+		var $element = $(document.getElementById(data)).bind('animationend', function(){
+             this.style.animationName = '';
+         });
+
+	    $element.css('animationName', 'shake');
+		//ev.target.style.boxShadow = "0px 0px 10px 3px white";
+	  }
+
+
+
+	//document.getElementById(data).style.opacity = "0.8";
+	//ev.target.style.opacity = "0.8";
+	ev.target.style.boxShadow = "";
+	//var src_xpos = src[0];
+	//var src_ypos = src[1];
+	
+	//alert(src_posx + ', ' + src_posy + '\n' + tar_posx + ', ' + tar_posy);
+	
+	//alert(tar_pos);
+
+	//ev.target.style.backgroundPositionX = src_posx + 'px';
+	//ev.target.style.backgroundPositionY = src_posy + 'px';
+	
+	
+}
+
+
+</script>
+
+
+
+  </body>
+</html>
